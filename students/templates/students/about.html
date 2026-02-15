@@ -1,12 +1,12 @@
 {% extends 'students/base.html' %}
-
+{% load static %}
 {% block content %}
 <h1>About This Project</h1>
 
 <p>{{ description }}</p>
 
-{% if description %}
-<p>The description is available.</p>
-{% endif %}
+<img src="{% static 'students/images/campus.jpg' %}"
+     alt="Campus Image"
+     width="500">
 
 {% endblock %}
