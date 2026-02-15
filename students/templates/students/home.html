@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>School Portal</title>
-</head>
-<body>
-<h1>Welcome to the School Portal</h1>
-<p>This is the students app home page.</p>
-</body>
-</html>
+{% extends 'students/base.html' %}
+
+{% block content %}
+<h1>{{ message }}</h1>
+
+<p>This is the home page.</p>
+
+<ul>
+    <li>Templates</li>
+    <li>Static Files</li>
+    <li>URL Routing</li>
+</ul>
+{% endblock %}
