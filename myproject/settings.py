@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -116,3 +116,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# 2. Add this line: This is where Render will "collect" all files for production
+# BASE_DIR is usually already defined at the top of your settings.py
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# 3. If you have a global static folder, make sure this is here too
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
